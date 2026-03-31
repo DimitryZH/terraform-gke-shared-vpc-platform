@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: legacy-demo
+  namespace: legacy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: legacy-demo
+  template:
+    metadata:
+      labels:
+        app: legacy-demo
+    spec:
+      containers:
+        - name: app
+          image: nginx:stable
+          ports:
+            - containerPort: 80

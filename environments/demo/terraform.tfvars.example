@@ -1,0 +1,7 @@
+project_id = "your-gcp-project-id"
+region     = "us-central1"
+zone       = "us-central1-a"
+
+cluster_name = "gke-demo-cluster"
+
+enable_spot_pool = true
